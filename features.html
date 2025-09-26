@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - CONNECT: An RFID-Based Library Visitor Logging System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animation setup */
+        .feature-card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover animation */
+        .feature-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div><strong>CONNECT: An RFID-Based Library Visitor Logging System</strong></div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="docs.html">Documentation</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align:center; color:#1a73e8; margin-bottom:1rem;">✨ Key Features</h1>
+        <p style="text-align:center; max-width:900px; margin:auto; margin-bottom:2rem; font-size:1.1rem; line-height:1.6;">
+            Discover the powerful tools and functionalities of <strong>CONNECT</strong>, an RFID-based library logging system 
+            built to simplify student tracking, enhance library management, and generate insightful reports. 📚
+        </p>
+
+        <div class="features-cards">
+            <div class="feature-card">
+                <h2>📇 RFID-Based Student Login</h2>
+                <p>Seamless and secure student authentication using RFID cards.</p>
+                <img src="images/login.png" alt="Screenshot of RFID-based student login interface" style="width:100%; border-radius:8px; margin-top:10px;">
+            </div>
+
+            <div class="feature-card">
+                <h2>📋 Real-Time Library Log Monitoring</h2>
+                <p>Automatically track student entry and exit for accurate library usage records.</p>
+                <img src="images/logs.png" alt="Screenshot of library log monitoring dashboard" style="width:100%; border-radius:8px; margin-top:10px;">
+            </div>
+
+            <div class="feature-card">
+                <h2>📄 PDF Report Generation</h2>
+                <p>Export detailed attendance and usage reports in PDF format for easy record-keeping and analysis.</p>
+                <img src="images/pdf.png" alt="Screenshot of PDF report export feature" style="width:100%; border-radius:8px; margin-top:10px;">
+            </div>
+
+            <div class="feature-card">
+                <h2>🔍 Advanced Search & Filtering</h2>
+                <p>Quickly find specific logs or student data by name, date, or purpose of visit.</p>
+                <img src="images/generate.png" alt="Screenshot of search and filter functionality" style="width:100%; border-radius:8px; margin-top:10px;">
+            </div>
+
+            <div class="feature-card">
+                <h2>⚙️ Customizable Purpose List</h2>
+                <p>Administrators can easily modify the list of visit purposes to match library policies.</p>
+                <img src="images/purpose.png" alt="Screenshot of customizable purpose list" style="width:100%; border-radius:8px; margin-top:10px;">
+            </div>
+
+            <div class="feature-card">
+                <h2>📊 Bulk Student Data Import</h2>
+                <p>Save time by importing multiple student records at once via an Excel file.</p>
+                <img src="images/bulk.png" alt="Screenshot of bulk import feature using Excel file" style="width:100%; border-radius:8px; margin-top:10px;">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 SchoolTech Solutions | <a href="https://github.com/MicoVicencio/Library-Logging-System" style="color:white;">GitHub Repo</a>
+    </footer>
+
+    <!-- JavaScript for scroll animations -->
+    <script>
+        const cards = document.querySelectorAll('.feature-card');
+
+        function revealCards() {
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (cardTop < windowHeight - 100) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealCards);
+        window.addEventListener('load', revealCards);
+    </script>
+</body>
+</html>

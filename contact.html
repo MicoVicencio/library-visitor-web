@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - CONNECT: An RFID-Based Library Visitor Logging System</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      flex: 1;
+      min-width: 320px;
+      max-width: 500px;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    /* Contact Details */
+    .contact-details {
+      flex: 1;
+      min-width: 280px;
+      max-width: 400px;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    /* Visible when in viewport */
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .contact-form h2,
+    .contact-details h2 {
+      margin-bottom: 1rem;
+      color: #1a73e8;
+      font-size: 1.3rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      margin-top: 1rem;
+      padding: 12px 20px;
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background: #0d47a1;
+    }
+
+    .contact-details p,
+    .contact-details li {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .contact-details ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-details li {
+      margin-bottom: 8px;
+    }
+
+    .contact-details a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #1a73e8;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>CONNECT: An RFID-Based Library Visitor Logging System</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="docs.html">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 style="text-align: center; margin-bottom: 1rem; color: #1a73e8">📬 Contact Us</h1>
+    <p style="text-align: center; max-width: 800px; margin: auto; margin-bottom: 2rem;">
+      Have questions, need support, or want to collaborate? Fill out the form or reach us through the details below. 💬
+    </p>
+
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send us a Message</h2>
+        <form id="contactForm">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Enter your phone" />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="statusMsg" style="margin-top: 1rem; font-weight: 600"></p>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="contact-details">
+        <h2>Contact Details</h2>
+        <p><strong>📧 Email:</strong> micovicencio55@gmail.com</p>
+        <p>
+          <strong>💻 GitHub:</strong>
+          <a href="https://github.com/MicoVicencio/Library-Logging-System" target="_blank">Library Logging System Repository</a>
+        </p>
+
+        <h2>📄 Project Info</h2>
+        <ul>
+          <li>🏷️ <strong>Project Title:</strong> CONNECT: RFID-Based Library Logging System</li>
+          <li>🏢 <strong>Project Proponent:</strong> SchoolTech Solutions</li>
+          <li>👨‍💼 <strong>CEO:</strong> Mico Vicencio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 SchoolTech Solutions |
+    <a href="https://github.com/MicoVicencio/Library-Logging-System" target="_blank">GitHub Repo</a>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("p-vEdPnblIB1wBjtt"); // Replace with your EmailJS Public Key
+    })();
+
+    const form = document.getElementById("contactForm");
+    const statusMsg = document.getElementById("statusMsg");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      emailjs.sendForm("service_vueoden", "template_ve0mi1i", this).then(
+        () => {
+          statusMsg.style.color = "green";
+          statusMsg.innerText = "✅ Message sent successfully!";
+          form.reset();
+        },
+        (err) => {
+          statusMsg.style.color = "red";
+          statusMsg.innerText = "❌ Failed to send message. Try again later.";
+          console.error("EmailJS error:", err);
+        }
+      );
+    });
+
+    // Scroll animations for contact form and details
+    const fadeElements = document.querySelectorAll('.contact-form, .contact-details');
+    function revealOnScroll() {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>

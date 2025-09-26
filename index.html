@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - CONNECT: An RFID-Based Library Visitor Logging System</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fade-in transition effect */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>CONNECT: An RFID-Based Library Visitor Logging System</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="docs.html">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container hero">
+    <h1 class="fade-in" style="text-align:center; color:#1a73e8;">
+      🏫 CONNECT: An RFID-Based Library Visitor Logging System
+    </h1>
+    <p class="fade-in" style="text-align:center; max-width:900px; margin:auto; margin-top:1rem; margin-bottom:2rem;">
+      Efficient RFID-based student tracking and library management system designed for modern academic environments. 
+      Track attendance, generate reports, and manage library operations seamlessly. 📊
+    </p>
+    <div class="fade-in" style="text-align:center; margin-bottom:2rem;">
+      <a href="features.html" class="button">✨ Explore Features</a>
+    </div>
+
+    <!-- Main UI YouTube Embed -->
+    <div class="fade-in" style="margin-top:30px; text-align:center;">
+      <h2 style="color:#1a73e8; margin-bottom:15px;">🎥 Video Demonstration</h2>
+      <iframe width="900" height="506" style="max-width:100%; border-radius:12px; box-shadow: 0 6px 20px rgba(0,0,0,0.25);" 
+        src="https://www.youtube.com/embed/Z8_UHvKmVKI" 
+        title="CONNECT: RFID-Based Library Visitor Logging System" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 SchoolTech Solutions | <a href="https://github.com/MicoVicencio/Library-Logging-System" style="color:white;">GitHub Repo</a>
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const elements = document.querySelectorAll('.fade-in');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>

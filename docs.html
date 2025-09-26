@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - CONNECT: An RFID-Based Library Visitor Logging System</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Transition base styles */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>CONNECT: An RFID-Based Library Visitor Logging System</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="docs.html">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container fade-in">
+    <h1 style="text-align:center; color:#1a73e8; margin-bottom:1rem;">📚 Documentation</h1>
+    <p style="text-align:center; max-width:900px; margin:auto; margin-bottom:2rem; font-size:1.1rem; line-height:1.6;">
+      Welcome to the <strong>An RFID-Based Library Visitor Logging System</strong>! 📚  
+      This Python desktop application, built with <code>Tkinter</code>, is designed to efficiently manage student records and track their library usage using RFID technology.  
+      It provides a simple yet powerful graphical user interface (GUI) for all your library management needs.
+    </p>
+
+    <section style="max-width:900px; margin:auto; line-height:1.8; font-size:1rem;">
+      <h2 class="fade-in">💻 Technologies & Libraries</h2>
+      <ul>
+        <li class="fade-in"><strong>Python 🐍</strong>: The primary programming language.</li>
+        <li class="fade-in"><strong>Tkinter</strong>: GUI toolkit used for the main interface, including ttk for themed widgets and messagebox for dialogs.</li>
+        <li class="fade-in"><strong>SQLite3</strong>: Lightweight, file-based database for storing students and logs.</li>
+        <li class="fade-in"><strong>reportlab</strong>: Generates PDF reports of library logs.</li>
+        <li class="fade-in"><strong>pandas</strong>: Reads and processes student data from Excel files for bulk import.</li>
+        <li class="fade-in"><strong>keyboard</strong>: Monitors RFID card scans and keyboard-related events.</li>
+        <li class="fade-in"><strong>Pillow (PIL)</strong>: Displays and processes images in the GUI.</li>
+        <li class="fade-in"><strong>tkcalendar</strong>: Adds a user-friendly date picker widget.</li>
+      </ul>
+
+      <h2 class="fade-in">📂 Core Functionalities</h2>
+
+      <h3 class="fade-in">🛠️ System Management</h3>
+      <ul>
+        <li class="fade-in"><strong>User Authentication</strong>: Secure login 🔒 with predefined admin and staff credentials.</li>
+        <li class="fade-in"><strong>RFID Monitoring</strong>: A background thread listens for RFID scans to log student entry/exit.</li>
+        <li class="fade-in"><strong>GUI Management</strong>: Handles main window, menu bar, and navigation.</li>
+      </ul>
+
+      <h3 class="fade-in">📝 Student Data Management</h3>
+      <ul>
+        <li class="fade-in"><strong>Add Student</strong>: Register a student with RFID, name, grade, and section.</li>
+        <li class="fade-in"><strong>View Students</strong>: Browse/search all registered students.</li>
+        <li class="fade-in"><strong>Update Student</strong>: Modify student details.</li>
+        <li class="fade-in"><strong>Delete Student</strong>: Remove student records.</li>
+        <li class="fade-in"><strong>Bulk Import</strong>: Import student records from Excel files.</li>
+      </ul>
+
+      <h3 class="fade-in">🗃️ Database Management</h3>
+      <ul>
+        <li class="fade-in"><strong>Table Creation</strong>: Automatically sets up tables for students, logs, and purposes on first run.</li>
+        <li class="fade-in"><strong>Data Persistence</strong>: Ensures all records and logs are permanently saved.</li>
+        <li class="fade-in"><strong>Queries</strong>: Fetch specific student info, logs, or purposes efficiently.</li>
+      </ul>
+
+      <h3 class="fade-in">📄 PDF Reporting</h3>
+      <ul>
+        <li class="fade-in"><strong>Log Generation</strong>: Create detailed PDF reports of student activity.</li>
+        <li class="fade-in"><strong>Custom Filters</strong>: Generate reports by student name or date range.</li>
+        <li class="fade-in"><strong>Automatic Saving</strong>: Reports are automatically saved to the desktop.</li>
+      </ul>
+    </section>
+
+    <p style="text-align:center; margin-top:2rem; font-style:italic; color:#555;" class="fade-in">
+      This system integrates RFID technology with modern Python libraries to deliver an efficient, secure, and user-friendly 
+      solution for library management.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 SchoolTech Solutions | <a href="https://github.com/MicoVicencio/Library-Logging-System" style="color:white;">GitHub Repo</a>
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const elements = document.querySelectorAll('.fade-in');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
